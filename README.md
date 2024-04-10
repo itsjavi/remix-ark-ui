@@ -1,6 +1,18 @@
-# Welcome to Remix + Vite!
+# Welcome to Remix + Vite + Park UI!
 
-📖 See the [Remix docs](https://remix.run/docs) and the [Remix Vite docs](https://remix.run/docs/en/main/future/vite) for details on supported features.
+Template repository for Remix + Vite + Ark UI + Panda CSS projects.
+
+📖 See the [Remix docs](https://remix.run/docs), the [Remix Vite docs](https://remix.run/docs/en/main/future/vite),
+and the [Park UI docs](https://park-ui.com/docs/panda/overview/introduction) for details on supported features.
+
+## What's included
+
+- Customizable Park UI components, built on top of Ark UI, Zag and Panda CSS
+- Themable UI components, with multiple color schemes based on Radix UI colors.
+- A base responsive layout supporting dark and light themes
+- Page transitions with `framer-motion`
+
+![screenshot](public/screenshot.png)
 
 ## Development
 

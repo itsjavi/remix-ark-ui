@@ -3,7 +3,7 @@ import { createToaster } from '@ark-ui/react/toast'
 import { XIcon } from 'lucide-react'
 import { IconButton } from '../ui/IconButton'
 
-const [Toaster, toastApi] = createToaster({
+const [Toaster, toasterApi] = createToaster({
   placement: 'bottom-end',
   render(toast) {
     return (
@@ -20,4 +20,4 @@ const [Toaster, toastApi] = createToaster({
   },
 })
 
-export { Toaster, toastApi }
+export { Toaster, toasterApi }

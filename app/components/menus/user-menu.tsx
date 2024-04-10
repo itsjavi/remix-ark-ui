@@ -4,6 +4,7 @@ import { LogInIcon, LogOutIcon, SettingsIcon, SquareUserRoundIcon, UserIcon } fr
 import { Flex, HStack } from 'styled-system/jsx'
 import { hstack } from 'styled-system/patterns'
 import DarkModeToggle from '../layout/dark-mode-toggle'
+import { toasterApi } from '../layout/toaster'
 import UserAvatar from './user-avatar'
 
 export default function UserMenu(props: Menu.RootProps) {
@@ -61,13 +62,25 @@ export default function UserMenu(props: Menu.RootProps) {
             <Menu.Separator />
             <Menu.Item id="loginorout">
               {isLoggedIn && (
-                <Link href={'/logout'} className={hstack({ gap: '2' })}>
+                <Link
+                  href={'/logout'}
+                  onClick={() => {
+                    toasterApi.create({ title: 'Logged out', description: 'You have been logged out' })
+                  }}
+                  className={hstack({ gap: '2' })}
+                >
                   <LogOutIcon />
                   Logout
                 </Link>
               )}
               {!isLoggedIn && (
-                <Link href={'/login'} className={hstack({ gap: '2' })}>
+                <Link
+                  href={'/login'}
+                  onClick={() => {
+                    toasterApi.create({ title: 'Logged in', description: 'Welcome again!' })
+                  }}
+                  className={hstack({ gap: '2' })}
+                >
                   <LogInIcon />
                   Login
                 </Link>

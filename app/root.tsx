@@ -4,6 +4,7 @@ import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, 
 import * as PageLayout from '@/components/layout/layout'
 import StaticGradientBg from '@/components/layout/static-gradient-bg'
 import { Toaster } from '@/components/layout/toaster'
+import PageTransition from './components/layout/page-transition'
 import styles from './styles.css?url'
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: styles }]
@@ -53,7 +54,9 @@ export default function App() {
         <PageLayout.Root>
           <PageLayout.Header />
           <PageLayout.Main>
-            <Outlet />
+            <PageTransition>
+              <Outlet />
+            </PageTransition>
           </PageLayout.Main>
           <PageLayout.Footer />
         </PageLayout.Root>
