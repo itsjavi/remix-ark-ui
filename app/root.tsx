@@ -18,7 +18,7 @@ export function ErrorBoundary() {
   return (
     <html lang="en" className="dark">
       <head>
-        <title>{errMsg}</title>
+        <title>ACME - {errMsg}</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
@@ -44,6 +44,7 @@ export default function App() {
   return (
     <html lang="en" className="dark font-inter">
       <head>
+        <title>Welcome to ACME!</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
