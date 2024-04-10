@@ -1,0 +1,54 @@
+{
+  "name": "remix-park-ui",
+  "private": true,
+  "author": "Javier Aguilar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itsjavi/remix-park-ui"
+  },
+  "sideEffects": true,
+  "type": "module",
+  "scripts": {
+    "build": "remix vite:build",
+    "dev": "remix vite:dev",
+    "lint": "biome lint . --max-diagnostics 50",
+    "lint-fix": "biome check --max-diagnostics 50 --apply .",
+    "format": "pnpm lint-fix",
+    "prepare": "panda codegen",
+    "start": "remix-serve ./build/server/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ark-ui/anatomy": "^3.0.0",
+    "@ark-ui/react": "^2.2.3",
+    "@remix-run/node": "^2.8.1",
+    "@remix-run/react": "^2.8.1",
+    "@remix-run/serve": "^2.8.1",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.26",
+    "isbot": "^4.1.0",
+    "lucide-react": "^0.367.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.6.4",
+    "@pandacss/dev": "^0.37.2",
+    "@pandacss/studio": "^0.37.2",
+    "@pandacss/types": "^0.37.2",
+    "@radix-ui/colors": "^3.0.0",
+    "@remix-run/dev": "^2.8.1",
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.20",
+    "@types/react-dom": "^18.2.7",
+    "autoprefixer": "^10.4.19",
+    "deepmerge": "^4.3.1",
+    "ts-pattern": "^5.1.1",
+    "typescript": "^5.1.6",
+    "vite": "^5.1.0",
+    "vite-tsconfig-paths": "^4.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
