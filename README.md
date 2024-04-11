@@ -8,9 +8,12 @@ and the [Park UI docs](https://park-ui.com/docs/panda/overview/introduction) for
 ## What's included
 
 - Customizable Park UI components, built on top of Ark UI, Zag and Panda CSS
-- Themable UI components, with multiple color schemes based on Radix UI colors.
+- Use any color scheme from Radix UI colors, with OKLCH / P3 color space support.
 - A base responsive layout supporting dark and light themes
 - Page transitions with `framer-motion`
+- Linting and formatting with `Biome`
+- `lucide-react` icons
+- Utils like `cn()`, `useRouteData()` and more
 
 ![screenshot](public/screenshot.png)
 
@@ -18,8 +21,18 @@ and the [Park UI docs](https://park-ui.com/docs/panda/overview/introduction) for
 
 Run the Vite dev server:
 
-```shellscript
-npm run dev
+```sh
+pnpm run dev
+```
+
+Linting and formatting:
+
+```sh
+pnpm run lint
+
+pnpm run format
+# or:
+pnpm run lint-fix
 ```
 
 ## Deployment
@@ -27,13 +40,13 @@ npm run dev
 First, build your app for production:
 
 ```sh
-npm run build
+pnpm run build
 ```
 
 Then run the app in production mode:
 
 ```sh
-npm start
+pnpm start
 ```
 
 Now you'll need to pick a host to deploy it to.
@@ -42,7 +55,7 @@ Now you'll need to pick a host to deploy it to.
 
 If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
 
-Make sure to deploy the output of `npm run build`
+Make sure to deploy the output of `pnpm run build`
 
 - `build/server`
 - `build/client`

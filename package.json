@@ -11,7 +11,7 @@
   "scripts": {
     "build": "remix vite:build",
     "dev": "remix vite:dev",
-    "lint": "biome lint . --max-diagnostics 50",
+    "lint": "pnpm typecheck && biome lint . --max-diagnostics 50",
     "lint-fix": "biome check --max-diagnostics 50 --apply .",
     "format": "pnpm lint-fix",
     "prepare": "panda codegen",
